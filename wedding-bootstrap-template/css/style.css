@@ -1,0 +1,443 @@
+
+/*** Spinner Start ***/
+#spinner {
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity .8s ease-out, visibility 0s linear .5s;
+    z-index: 99999;
+ }
+
+ #spinner.show {
+     transition: opacity .8s ease-out, visibility 0s linear .0s;
+     visibility: visible;
+     opacity: 1;
+ }
+/*** Spinner End ***/
+
+.back-to-top {
+    position: fixed;
+    right: 30px;
+    bottom: 30px;
+    display: flex;
+    width: 45px;
+    height: 45px;
+    align-items: center;
+    justify-content: center;
+    transition: 0.5s;
+    z-index: 99;
+}
+
+/*** Button Start ***/
+.btn {
+    font-weight: 600;
+    transition: .5s;
+}
+
+.btn-square {
+    width: 32px;
+    height: 32px;
+}
+
+.btn-sm-square {
+    width: 34px;
+    height: 34px;
+}
+
+.btn-md-square {
+    width: 44px;
+    height: 44px;
+}
+
+.btn-lg-square {
+    width: 56px;
+    height: 56px;
+}
+
+.btn-square,
+.btn-sm-square,
+.btn-md-square,
+.btn-lg-square {
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: normal;
+}
+
+.btn-primary-outline-0 {
+    color: var(--bs-white) !important;
+    border: 1px solid var(--bs-primary);
+}
+
+.btn-light-outline-0 {
+    color: var(--bs-primary) !important;
+    border: 1px solid var(--bs-light);
+}
+
+.btn-primary-outline-0:hover {
+    background: var(--bs-secondary) !important;
+    color: var(--bs-white) !important;
+    border: 1px solid var(--bs-primary);
+}
+
+.btn-light-outline-0:hover {
+    background: var(--bs-primary) !important;
+    color: var(--bs-white) !important;
+    border: 1px solid var(--bs-secondary);
+}
+
+.img-border {
+    border-color: var(--bs-secondary);
+    border-style: double;
+}
+
+.display-1,
+.display-2,
+.display-3,
+.display-4,
+.display-5,
+.display-6 {
+    font-family: 'Great Vibes', cursive;
+    font-weight: 700;
+}
+
+
+/*** Navbar Start ***/
+.sticky-top {
+    transition: 0.5s;
+    background: var(--bs-white);
+}
+
+
+.navbar .navbar-nav .nav-link {
+    padding: 10px 15px;
+    font-family: 'Petit Formal Script', cursive;
+    font-weight: 600;
+    font-size: 16px;
+    transition: .5s;
+}
+
+.navbar .navbar-nav .nav-link:hover,
+.navbar .navbar-nav .nav-link.active,
+.sticky-top.bg-white .navbar .navbar-nav .nav-link:hover,
+.sticky-top.bg-white .navbar .navbar-nav .nav-link.active {
+    color: var(--bs-primary);
+}
+
+@media (min-width: 1200px) {
+    .navbar .navbar-collapse .border-top {
+        border-top: none !important;
+    }
+}
+/*** Navbar End ***/
+
+/*** Carousel Start ***/
+.carousel-item {
+    position: relative;
+    min-height: 100vh
+    
+}
+
+.carousel-item img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.carousel-item .carousel-caption {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    text-align: center;
+    background: linear-gradient(rgba(0, 0, 0, .4), rgba(0, 0, 0, 0.4));
+    background-size: cover;
+}
+
+.carousel-control-prev,
+.carousel-control-next {
+    opacity: 0;
+}
+
+.carousel-control-prev .carousel-control-prev-icon,
+.carousel-control-next .carousel-control-next-icon {
+    background: transparent;
+}
+
+#carouselId .carousel-indicators {
+    padding-bottom: 30px;
+}
+
+#carouselId .carousel-indicators li {
+    border-top: 10px solid var(--bs-white);
+    border-bottom: 10px solid var(--bs-white);
+    border-right: 5px solid var(--bs-white);
+    border-left: 5px solid var(--bs-white);
+    margin-right: 10px;
+    transition: 0.5s;
+}
+
+#carouselId .carousel-indicators li.active {
+    background: var(--bs-primary);
+    border-color: var(--bs-primary);
+    border-right: 15px solid var(--bs-primary);
+    border-left: 15px solid var(--bs-primary);
+}
+/*** Carousel End ***/
+
+
+/*** Wedding Story Start ***/
+.story .story-timeline,
+.story .story-timeline .row {
+    position: relative;
+}
+
+.story .story-timeline::before,
+.story .story-timeline::after {
+    position: absolute;
+    content: "";
+    width: 15px;
+    height: 15px;
+    background: var(--bs-secondary);
+    border-radius: 10px;
+    left: 50%;
+    top: -7px;
+    transform: translateX(-50%);
+}
+
+.story .story-timeline::after {
+    top: auto;
+    bottom: -7px;
+}
+
+.story .story-timeline .row::after {
+    position: absolute;
+    content: "\f004";
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    font-size: 30px;
+    color: var(--bs-secondary);
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+@media (max-width: 768px) {
+    .story .story-timeline::before,
+    .story .story-timeline::after,
+    .story .story-timeline .row::after  {
+        display: none;
+    }
+}
+/*** Wedding Story End ***/
+
+/*** Wedding Date Start ***/
+.wedding-date-bg .wedding-date {
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+    background: linear-gradient(rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5)), url(../img/wedding-date-bg.jpg) center;
+    object-fit: cover;
+    background-repeat: no-repeat;
+}
+
+.wedding-date-bg .wedding-date::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: flex;
+    width: 100%;
+    height: 100%;
+    z-index: 3;
+}
+
+.wedding-date-bg .wedding-date .wedding-date-content {
+    position: relative;
+    z-index: 9;
+}
+/*** Wedding Date End ***/
+
+
+/*** Wedding Timeline Start ***/
+@media (max-width: 576px) {
+    .wedding-timeline .wedding-content .heart-circle {
+        display: none;
+    }
+}
+/*** Wedding Timeline End ***/
+
+
+/*** Gallery Start ***/
+.gallery .gallery-img {
+    position: relative;
+    overflow: hidden;
+}
+
+.gallery .gallery-img .hover-style {
+    width: 0;
+    height: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transition: 1s;
+}
+
+.gallery .gallery-img:hover .hover-style {
+    width: auto;
+    height: auto;
+    border: 600px solid rgba(255, 255, 255, 0.3);
+    opacity: 1;
+}
+
+.gallery .gallery-img img {
+    transition: 0.5s;
+}
+
+.gallery .gallery-img:hover img {
+    transform: scale(1.3);
+}
+
+.gallery .gallery-item .gallery-overlay {
+    transition: 0.5s;
+}
+
+.gallery .gallery-item:hover .gallery-overlay {
+    background: transparent !important;
+    border: 0 !important;
+}
+
+
+.gallery .gallery-img .search-icon {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transition: 0.5s;
+    opacity: 0;
+    z-index: 2;
+    
+}
+
+.gallery .gallery-img:hover .search-icon {
+    opacity: 1;
+}
+/*** Gallery End ***/
+
+
+/*** team Start ***/
+.team .team-item {
+    position: relative;
+    overflow: hidden;
+}
+
+.team .team-item .team-content {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    bottom: 0;
+    left: 0;
+    display: flex;
+    align-items: end;
+    justify-content: center;
+    transition: 0.5s;
+    z-index: 4;
+}
+
+.team .team-item:hover .team-content {
+    background: rgba(0, 0, 0, .5);
+}
+
+.team .team-item .team-content {
+    text-align: center;
+}
+
+.team .team-item .team-social {
+    position: absolute;
+    top: -180px;
+    right: 15px;
+    z-index: 5;
+    transition: 0.5s;
+}
+
+.team .team-item:hover .team-social {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    z-index: 5;
+}
+
+.team .team-item .team-img {
+    position: relative;
+    overflow: hidden;
+    border-color: var(--bs-secondary);
+    border-style: double;
+}
+
+.team .team-item .team-img .team-img-main {
+    position: relative;
+    z-index: 3;
+}
+
+.team .team-item .team-img .team-img-main img,
+.team .team-item .team-img .team-img-bg img {
+    transition: 0.5s;
+}
+
+.team .team-item:hover .team-img .team-img-main img,
+.team .team-item:hover .team-img .team-img-bg img {
+    transform: scale(1.1);
+}
+/*** Team End ***/
+
+
+/*** Contact Us Start ***/
+.RSVP-form {
+    background: linear-gradient(rgba(255, 255, 255, 0.08), rgba(0, 0, 0, 0.2));
+    object-fit: cover;
+}
+/*** Contact Us End ***/
+
+
+/*** Footer Start ***/
+.footer {
+    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(../img/footer-bg.jpg) center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.footer .footer-item a.btn-link,
+.footer .footer-item p {
+    line-height: 35px;
+    font-size: 17px;
+    color: var(--bs-light);
+    transition: 0.5s;
+}
+
+.footer .footer-item a.btn-link:hover {
+    color: var(--bs-primary);
+    letter-spacing: 2px;
+}
+
+@media (max-width: 992px) {
+    .footer .text-start,
+    .footer .text-center,
+    .footer .text-end {
+        text-align: center !important;
+    }
+}
+/*** Footer End ***/
+
+
+/*** copyright Start ***/
+.copyright {
+    border-top: 1px solid rgba(255, 255, 255, 0.08);
+    background: var(--bs-dark) !important;
+}
+/*** copyright end ***/
